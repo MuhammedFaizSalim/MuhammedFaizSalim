@@ -112,21 +112,44 @@
 					<style>
 					.about-container {
 						display: flex;
-						align-items: center;
-						gap: 20px;
 						flex-wrap: wrap;
 					}
 
+					.about-image-container {
+						flex: 1 1 50%;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						padding: 20px;
+					}
+
 					.about-image {
-						width: 150px;
-						height: 150px;
+						width: 250px;
+						height: 250px;
 						border-radius: 50%;
 						object-fit: cover;
 					}
 
 					.about-text {
-						flex: 1;
-						min-width: 250px;
+						flex: 1 1 50%;
+						padding: 20px;
+					}
+
+					@media (max-width: 768px) {
+						.about-container {
+						flex-direction: column;
+						align-items: center;
+						}
+
+						.about-image-container,
+						.about-text {
+						flex: 1 1 100%;
+						text-align: center;
+						}
+
+						.about-text {
+						padding: 10px 20px;
+						}
 					}
 					</style>
 
@@ -134,10 +157,13 @@
 					<!-- Featured Post -->
 					<article class="post featured">
 						<div class="about-container">
-						<!-- Image on the left -->
-						<img src="images/Skyline.jpg" alt="Muhammed Salim" class="about-image">
+						
+						<!-- Left Half: Image -->
+						<div class="about-image-container">
+							<img src="images/Skyline.jpg" alt="Muhammed Salim" class="about-image">
+						</div>
 
-						<!-- Text on the right -->
+						<!-- Right Half: Text -->
 						<div class="about-text">
 							<p>I'm Muhammed Salim, a Civil Engineering student at the University of Toronto.</p>
 
@@ -150,6 +176,7 @@
 						</div>
 					</article>
 					</div>
+
 
 				<!-- Footer -->
 					<footer id="footer">
