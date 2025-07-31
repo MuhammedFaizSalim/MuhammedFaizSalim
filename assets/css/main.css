@@ -3024,6 +3024,14 @@ input, select, textarea {
 		border-top-color: #eeeeee;
 	}
 
+.project-image {
+  float: left;
+  width: 300px;
+  height: auto;
+  margin: 10px 20px 20px 0;
+  border-radius: 8px;
+}
+
 /* Table */
 
 	.table-wrapper {
